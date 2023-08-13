@@ -224,7 +224,7 @@ public class App : MonoBehaviour
         Carrot.Carrot_Box_Item Item_price_currency = box_setting.create_item_of_top("Item_price_per_km");
         Item_price_currency.set_icon(this.GetComponent<Currency_list>().icon_Currency);
         Item_price_currency.set_title("Currency unit");
-        Item_price_currency.set_tip("Please take a moment to rate this app (" + this.GetComponent<Currency_list>().get_cur_symbol_currency() + " - " + this.GetComponent<Currency_list>().get_cur_name_currency() + ")");
+        Item_price_currency.set_tip("Select the currency for the invoice (" + this.GetComponent<Currency_list>().get_cur_symbol_currency() + " - " + this.GetComponent<Currency_list>().get_cur_name_currency() + ")");
         Item_price_currency.set_key_lang_title("currency_unit");
         Item_price_currency.set_key_lang_tip("currency_unit_tip");
         Item_price_currency.set_act(this.GetComponent<Currency_list>().show_list_Currency);

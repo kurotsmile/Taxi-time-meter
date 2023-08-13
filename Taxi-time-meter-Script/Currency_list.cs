@@ -1,14 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Currency_list : MonoBehaviour
 {
+    [Header("Obj main")]
+    public App app;
+
+    [Header("Obj Currency")]
     public Sprite icon_Currency;
+    public Sprite icon_money;
     public Sprite icon_Currency_select;
     public Text txt_icon_fare_currency_symbol;
     public Text txt_icon_fare_currency_name;
+
+    [Header("Data Currency")]
+    public string[] name_currency;
+    public string[] code_currency;
+    public string[] symbol_currency;
 
     private string sel_name_currency;
     private string sel_symbol_currency;
@@ -24,33 +32,32 @@ public class Currency_list : MonoBehaviour
 
     public void show_list_Currency()
     {
-        WWWForm frm_list_currency=this.GetComponent<App>().carrot.frm_act("get_list_currency");
-        //this.GetComponent<App>().carrot.send(frm_list_currency,after_show_list_Currency);
-    }
+        this.app.obj_effect_bloom.SetActive(false);
+        this.box_Currency = this.app.carrot.Create_Box(PlayerPrefs.GetString("currency_unit", "Currency unit"), this.icon_Currency);
 
-    private void after_show_list_Currency(string s_data)
-    {
-        this.GetComponent<App>().obj_effect_bloom.SetActive(false);
-        box_Currency = this.GetComponent<App>().carrot.Create_Box(PlayerPrefs.GetString("currency_unit", "Currency unit"), this.icon_Currency);
-        IList list_c = (IList)Carrot.Json.Deserialize(s_data);
-
-        for (int i = 0; i < list_c.Count; i++)
+        for (int i = 0; i < this.code_currency.Length; i++)
         {
-            IDictionary data_c = (IDictionary)list_c[i];
+            var index_currency = i;
+            string s_tip = this.code_currency[i] + " - " + this.symbol_currency[i];
             Carrot.Carrot_Box_Item item_Currency_obj = box_Currency.create_item("currency_" + i);
-            item_Currency_obj.set_icon(this.icon_Currency);
-            item_Currency_obj.set_title(data_c["code"].ToString());
-            item_Currency_obj.set_tip(data_c["symbol"].ToString());
-            item_Currency_obj.set_act(() => this.select_Currency(data_c["code"].ToString(), data_c["symbol"].ToString()));
+            item_Currency_obj.set_icon(this.icon_money);
+            item_Currency_obj.set_title(this.name_currency[i]);
+            item_Currency_obj.set_tip(s_tip);
+            item_Currency_obj.set_act(() => this.select_Currency(this.code_currency[index_currency], this.symbol_currency[index_currency]));
 
-            if(this.get_cur_symbol_currency()== data_c["symbol"].ToString())
+            if (this.get_cur_symbol_currency() != this.symbol_currency[i])
             {
-                Carrot.Carrot_Box_Btn_Item btn_check=item_Currency_obj.create_item();
+                Carrot.Carrot_Box_Btn_Item btn_check = item_Currency_obj.create_item();
                 btn_check.set_icon(this.icon_Currency_select);
+                btn_check.set_color(this.app.carrot.color_highlight);
+                Destroy(btn_check.GetComponent<Button>());
             }
         }
+
+        this.box_Currency.update_color_table_row();
         box_Currency.set_act_before_closing(act_close_list_currency);
     }
+
 
     private void act_close_list_currency()
     {
@@ -65,9 +72,8 @@ public class Currency_list : MonoBehaviour
         PlayerPrefs.SetString("symbol_currency", this.sel_symbol_currency);
         this.txt_icon_fare_currency_name.text = this.sel_name_currency;
         this.txt_icon_fare_currency_symbol.text = this.sel_symbol_currency;
-        this.GetComponent<App>().carrot.play_sound_click();
+        this.app.carrot.play_sound_click();
         if (this.box_Currency != null) this.box_Currency.close();
-        
     }
 
     public string get_cur_name_currency()

@@ -1584,6 +1584,118 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217149144}
   m_CullTransparentMesh: 1
+--- !u!1001 &260979173
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5170736565810424376, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_Name
+      value: Carrot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: model_app
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: setting_lang
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: setting_login
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: setting_vibrate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: Carrotstore_AppId
+      value: Taxi time meter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: setting_soundtrack
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: color_highlight.rgba
+      value: 4278234111
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: index_inapp_remove_ads
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: collection_document_lang
+      value: lang_taxi_time_meter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: index_inapp_buy_bk_music
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+--- !u!114 &260979174 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
+  m_PrefabInstance: {fileID: 260979173}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99072c8f0c1c9014fa8cd890c4a3da76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &282917190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1951,11 +2063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 80aff8665856cae499167e427e6965cf, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
 --- !u!1 &398267739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,54 +2819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 519420032}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -7853,7 +7912,7 @@ MonoBehaviour:
   sp_taxi_play: {fileID: 21300000, guid: 6e19a891343cd234fa5f8df106c48ab0, type: 3}
   sp_taxi_pause: {fileID: 21300000, guid: 2ad226832285a6848a4222a877b46e95, type: 3}
   obj_digit_n: {fileID: 882354336665808750, guid: 398f3390db75fad4e83701c8d0208aea, type: 3}
-  carrot: {fileID: 0}
+  carrot: {fileID: 260979174}
   digit_control:
   - {fileID: 1412118343}
   - {fileID: 735867428}
@@ -7939,6 +7998,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ee1113745d9614e95512a24bdf78d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  key: []
+  emp: []
+  List_img_change_icon_lang: []
 --- !u!114 &1586770118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7973,10 +8035,351 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d63d44cf7c4d574bae925f108eff35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon_Currency: {fileID: 21300000, guid: d3c5eda441a934b4380f9bf4fb2dfafb, type: 3}
+  app: {fileID: 1586770114}
+  icon_Currency: {fileID: 21300000, guid: b2ff7bff0b79b8146a8eae521ec1f9f2, type: 3}
+  icon_money: {fileID: 21300000, guid: 933330f9338bebf4fa6d5d63a011e130, type: 3}
   icon_Currency_select: {fileID: 21300000, guid: fd01247be9ba67b49bdb2720deefe5bc, type: 3}
   txt_icon_fare_currency_symbol: {fileID: 282917192}
   txt_icon_fare_currency_name: {fileID: 289097470}
+  name_currency:
+  - Albania Lek
+  - Afghanistan Afghani
+  - Argentina Peso
+  - Aruba Guilder
+  - Australia Dollar
+  - Azerbaijan Manat
+  - Bahamas Dollar
+  - Barbados Dollar
+  - Belarus Ruble
+  - Belize Dollar
+  - Bermuda Dollar
+  - "Bolivia Bol\xEDviano"
+  - Bosnia and Herzegovina Convertible Mark
+  - Botswana Pula
+  - Bulgaria Lev
+  - Brazil Real
+  - Brunei Darussalam Dollar
+  - Cambodia Riel
+  - Canada Dollar
+  - Cayman Islands Dollar
+  - Chile Peso
+  - China Yuan Renminbi
+  - Colombia Peso
+  - Costa Rica Colon
+  - Croatia Kuna
+  - Cuba Peso
+  - Czech Republic Koruna
+  - Denmark Krone
+  - Dominican Republic Peso
+  - East Caribbean Dollar
+  - Egypt Pound
+  - El Salvador Colon
+  - Euro Member Countries
+  - Falkland Islands (Malvinas) Pound
+  - Fiji Dollar
+  - Ghana Cedi
+  - Gibraltar Pound
+  - Guatemala Quetzal
+  - Guernsey Pound
+  - Guyana Dollar
+  - Honduras Lempira
+  - Hong Kong Dollar
+  - Hungary Forint
+  - Iceland Krona
+  - India Rupee
+  - Indonesia Rupiah
+  - Iran Rial
+  - Isle of Man Pound
+  - Israel Shekel
+  - Jamaica Dollar
+  - Japan Yen
+  - Jersey Pound
+  - Kazakhstan Tenge
+  - Korea (North) Won
+  - Korea (South) Won
+  - Kyrgyzstan Som
+  - Laos Kip
+  - Lebanon Pound
+  - Liberia Dollar
+  - Macedonia Denar
+  - Malaysia Ringgit
+  - Mauritius Rupee
+  - Mexico Peso
+  - Mongolia Tughrik
+  - Moroccan-dirham
+  - Mozambique Metical
+  - Namibia Dollar
+  - Nepal Rupee
+  - Netherlands Antilles Guilder
+  - New Zealand Dollar
+  - Nicaragua Cordoba
+  - Nigeria Naira
+  - Norway Krone
+  - Oman Rial
+  - Pakistan Rupee
+  - Panama Balboa
+  - Paraguay Guarani
+  - Peru Sol
+  - Philippines Peso
+  - Poland Zloty
+  - Qatar Riyal
+  - Romania Leu
+  - Russia Ruble
+  - Saint Helena Pound
+  - Saudi Arabia Riyal
+  - Serbia Dinar
+  - Seychelles Rupee
+  - Singapore Dollar
+  - Solomon Islands Dollar
+  - Somalia Shilling
+  - South Korean Won
+  - South Africa Rand
+  - Sri Lanka Rupee
+  - Sweden Krona
+  - Switzerland Franc
+  - Suriname Dollar
+  - Syria Pound
+  - Taiwan New Dollar
+  - Thailand Baht
+  - Trinidad and Tobago Dollar
+  - Turkey Lira
+  - Tuvalu Dollar
+  - Ukraine Hryvnia
+  - UAE-Dirham
+  - United Kingdom Pound
+  - United States Dollar
+  - Uruguay Peso
+  - Uzbekistan Som
+  - "Venezuela Bol\xEDvar"
+  - Viet Nam Dong
+  - Yemen Rial
+  - Zimbabwe Dollar
+  code_currency:
+  - ALL
+  - AFN
+  - ARS
+  - AWG
+  - AUD
+  - AZN
+  - BSD
+  - BBD
+  - BYN
+  - BZD
+  - BMD
+  - BOB
+  - BAM
+  - BWP
+  - BGN
+  - BRL
+  - BND
+  - KHR
+  - CAD
+  - KYD
+  - CLP
+  - CNY
+  - COP
+  - CRC
+  - HRK
+  - CUP
+  - CZK
+  - DKK
+  - DOP
+  - XCD
+  - EGP
+  - SVC
+  - EUR
+  - FKP
+  - FJD
+  - GHS
+  - GIP
+  - GTQ
+  - GGP
+  - GYD
+  - HNL
+  - HKD
+  - HUF
+  - ISK
+  - INR
+  - IDR
+  - IRR
+  - IMP
+  - ILS
+  - JMD
+  - JPY
+  - JEP
+  - KZT
+  - KPW
+  - KRW
+  - KGS
+  - LAK
+  - LBP
+  - LRD
+  - MKD
+  - MYR
+  - MUR
+  - MXN
+  - MNT
+  - MNT
+  - MZN
+  - NAD
+  - NPR
+  - ANG
+  - NZD
+  - NIO
+  - NGN
+  - NOK
+  - OMR
+  - PKR
+  - PAB
+  - PYG
+  - PEN
+  - PHP
+  - PLN
+  - QAR
+  - RON
+  - RUB
+  - SHP
+  - SAR
+  - RSD
+  - SCR
+  - SGD
+  - SBD
+  - SOS
+  - KRW
+  - ZAR
+  - LKR
+  - SEK
+  - CHF
+  - SRD
+  - SYP
+  - TWD
+  - THB
+  - TTD
+  - TRY
+  - TVD
+  - UAH
+  - AED
+  - GBP
+  - USD
+  - UYU
+  - UZS
+  - VEF
+  - VND
+  - YER
+  - ZWD
+  symbol_currency:
+  - Lek
+  - "\u060B"
+  - $
+  - "\u0192"
+  - $
+  - "\u20BC"
+  - $
+  - $
+  - Br
+  - BZ$
+  - $
+  - $b
+  - KM
+  - P
+  - "\u043B\u0432"
+  - R$
+  - $
+  - "\u17DB"
+  - $
+  - $
+  - $
+  - "\xA5"
+  - $
+  - "\u20A1"
+  - kn
+  - "\u20B1"
+  - "K\u010D"
+  - kr
+  - RD$
+  - $
+  - "\xA3"
+  - $
+  - "\u20AC"
+  - "\xA3"
+  - $
+  - "\xA2"
+  - "\xA3"
+  - Q
+  - "\xA3"
+  - $
+  - L
+  - $
+  - Ft
+  - kr
+  - "\u20B9"
+  - Rp
+  - "\uFDFC"
+  - "\xA3"
+  - "\u20AA"
+  - J$
+  - "\xA5"
+  - "\xA3"
+  - "\u043B\u0432"
+  - "\u20A9"
+  - "\u20A9"
+  - "\u043B\u0432"
+  - "\u20AD"
+  - "\xA3"
+  - $
+  - "\u0434\u0435\u043D"
+  - RM
+  - "\u20A8"
+  - $
+  - "\u20AE"
+  - "\u062F.\u0625"
+  - MT
+  - $
+  - "\u20A8"
+  - "\u0192 "
+  - $
+  - C$
+  - "\u20A6"
+  - kr
+  - "\uFDFC"
+  - "\u20A8"
+  - B/.
+  - Gs
+  - S/.
+  - "\u20B1"
+  - "z\u0142"
+  - "\uFDFC"
+  - lei
+  - "\u20BD"
+  - "\xA3"
+  - "\uFDFC"
+  - "\u0414\u0438\u043D."
+  - "\u20A8"
+  - $
+  - $
+  - $
+  - S
+  - "\u20A9"
+  - R
+  - "\u20A8"
+  - kr
+  - CHF
+  - $
+  - "\xA3"
+  - NT$
+  - "\u0E3F"
+  - "\u20BA"
+  - $
+  - "\u20B4"
+  - "\u062F.\u0625"
+  - "\xA3"
+  - $
+  - $U
+  - "\u043B\u0432"
+  - Bs
+  - "\u20AB"
+  - "\uFDFC"
+  - Z$
 --- !u!1 &1596481957
 GameObject:
   m_ObjectHideFlags: 0
