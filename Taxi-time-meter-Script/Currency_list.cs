@@ -25,7 +25,7 @@ public class Currency_list : MonoBehaviour
     public void show_list_Currency()
     {
         WWWForm frm_list_currency=this.GetComponent<App>().carrot.frm_act("get_list_currency");
-        this.GetComponent<App>().carrot.send(frm_list_currency,after_show_list_Currency);
+        //this.GetComponent<App>().carrot.send(frm_list_currency,after_show_list_Currency);
     }
 
     private void after_show_list_Currency(string s_data)

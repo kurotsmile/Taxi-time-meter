@@ -104,7 +104,7 @@ NavMeshSettings:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    serializedVersion: 2
+    serializedVersion: 3
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    buildHeightMesh: 0
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -2774,9 +2774,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -6153,7 +6161,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -6542,174 +6552,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232844232}
   m_CullTransparentMesh: 1
---- !u!1001 &1248871798
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 292901969, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: is_use_assebundle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 292901969, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: emp_show_lang.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 292901969, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: emp_show_lang.Array.data[1]
-      value: 
-      objectReference: {fileID: 1586770117}
-    - target: {fileID: 1069686048, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069686048, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069686048, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: onPurchaseFailed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1069686048, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: onPurchaseComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424376, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_Name
-      value: Carrot
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: os_app
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: pay_app
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: host_app
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: model_app
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: type_rate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: store_public
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: emp_show_lang
-      value: 
-      objectReference: {fileID: 1586770117}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: link_share_app
-      value: https://carrotstore.com/p/com.carrotstore.taxitimemeter-apk
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: Carrotstore_AppId
-      value: 757
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: WindowUWP_ProductId
-      value: 9N2S72B8QCX7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: color_highlight.rgba
-      value: 4279732969
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: path_php_file_action
-      value: app_mobile/taxi_time_meter/app.php
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: id_ads_Banner_android
-      value: ca-app-pub-5388516931803092/5996735979
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: index_inapp_remove_ads
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: index_inapp_buy_bk_music
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: ads_vungle_game_id_window
-      value: 6323d8f8978878c6527e6eec
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: id_ads_Interstitial_android
-      value: ca-app-pub-5388516931803092/3298420446
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: ads_vungle_interstitial_placement_id
-      value: TRUNG_GIANG-9533954
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5170736565810424379, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
---- !u!114 &1248871799 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5170736565810424378, guid: 03a96ab3934df714c9f607eeba1302ab, type: 3}
-  m_PrefabInstance: {fileID: 1248871798}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99072c8f0c1c9014fa8cd890c4a3da76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1249909158
 GameObject:
   m_ObjectHideFlags: 0
@@ -7202,6 +7044,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1264507879}
     m_Modifications:
     - target: {fileID: 7036162411628352186, guid: 82f7757a68786f548a1dbbce2cc8f911, type: 3}
@@ -7341,6 +7184,9 @@ PrefabInstance:
       value: Item_km
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82f7757a68786f548a1dbbce2cc8f911, type: 3}
 --- !u!224 &1358336149 stripped
 RectTransform:
@@ -8007,7 +7853,7 @@ MonoBehaviour:
   sp_taxi_play: {fileID: 21300000, guid: 6e19a891343cd234fa5f8df106c48ab0, type: 3}
   sp_taxi_pause: {fileID: 21300000, guid: 2ad226832285a6848a4222a877b46e95, type: 3}
   obj_digit_n: {fileID: 882354336665808750, guid: 398f3390db75fad4e83701c8d0208aea, type: 3}
-  carrot: {fileID: 1248871799}
+  carrot: {fileID: 0}
   digit_control:
   - {fileID: 1412118343}
   - {fileID: 735867428}
@@ -8093,51 +7939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ee1113745d9614e95512a24bdf78d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key:
-  - setting
-  - driving_history
-  - begin
-  - running_time
-  - fare
-  - distance
-  - price_per_km
-  - driving_history
-  - invoice_printing
-  - completed
-  - new_session
-  - price_per_km
-  - done
-  - cancel
-  - price_per_km_tip
-  - price_per_km
-  - distance
-  - inp_tip
-  - inp_tip
-  - kilometro
-  - km_price_add_frm
-  emp:
-  - {fileID: 1055669407}
-  - {fileID: 2016530936}
-  - {fileID: 47649390}
-  - {fileID: 429556285}
-  - {fileID: 815402075}
-  - {fileID: 1909713588}
-  - {fileID: 611659683}
-  - {fileID: 1747739115}
-  - {fileID: 510267110}
-  - {fileID: 53222688}
-  - {fileID: 1642825567}
-  - {fileID: 581195962}
-  - {fileID: 809126812}
-  - {fileID: 1543784369}
-  - {fileID: 1232122}
-  - {fileID: 1897396284}
-  - {fileID: 878566961}
-  - {fileID: 811412592}
-  - {fileID: 2071985815}
-  - {fileID: 1812697741}
-  - {fileID: 1249909160}
-  List_img_change_icon_lang: []
 --- !u!114 &1586770118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11303,6 +11104,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1412118339}
     m_Modifications:
     - target: {fileID: 882354336665808750, guid: 398f3390db75fad4e83701c8d0208aea, type: 3}
@@ -11394,12 +11196,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 398f3390db75fad4e83701c8d0208aea, type: 3}
 --- !u!1001 &8245033700254169687
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1264507879}
     m_Modifications:
     - target: {fileID: 8245033699801462468, guid: 023f08964a8ff2c428ea2a1079c9392f, type: 3}
@@ -11495,4 +11301,7 @@ PrefabInstance:
       value: Item_km_add
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 023f08964a8ff2c428ea2a1079c9392f, type: 3}
