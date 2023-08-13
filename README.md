@@ -1,2 +1,2 @@
 # Taxi-time-meter
-This is a great app to replace taxi timers and bill your customers 
+This is a great app to replace taxi timers and bill your customers Modern interface and easy interaction with basic function buttons Distance counters and good locators will help customers and drivers to use during travel There are also many other special functions such as viewing the distance when pressing the graph button in the application You can adjust the price with the corresponding distance traveled When using the application you must grant location permission to be able to calculate the correct distance and use other functions perfectly.
