@@ -396,7 +396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.740002, y: 0}
+  m_AnchoredPosition: {x: 16.740005, y: 0}
   m_SizeDelta: {x: -45.32, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &47649390
@@ -2897,7 +2897,7 @@ GameObject:
   - component: {fileID: 532066618}
   - component: {fileID: 532066617}
   m_Layer: 5
-  m_Name: Image
+  m_Name: price_km_pic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4941,7 +4941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.4, y: -9.199997}
+  m_AnchoredPosition: {x: -8.399994, y: -9.199997}
   m_SizeDelta: {x: 30.92, y: 25.29}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &940691746
@@ -5075,7 +5075,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65.1, y: -34.1}
+  m_AnchoredPosition: {x: -65.100006, y: -34.1}
   m_SizeDelta: {x: 30.92, y: 25.290009}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &944590758
@@ -5659,7 +5659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.740002, y: 0}
+  m_AnchoredPosition: {x: 16.740005, y: 0}
   m_SizeDelta: {x: -45.32, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1055669407
@@ -6925,7 +6925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.4, y: -9.199997}
+  m_AnchoredPosition: {x: -8.399994, y: -9.199997}
   m_SizeDelta: {x: 30.92, y: 25.29}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1302592828
@@ -7106,6 +7106,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1264507879}
     m_Modifications:
+    - target: {fileID: 7036162411105837442, guid: 82f7757a68786f548a1dbbce2cc8f911, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -89.64502
+      objectReference: {fileID: 0}
     - target: {fileID: 7036162411628352186, guid: 82f7757a68786f548a1dbbce2cc8f911, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -7129,6 +7133,14 @@ PrefabInstance:
     - target: {fileID: 7036162411628352186, guid: 82f7757a68786f548a1dbbce2cc8f911, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036162411933510456, guid: 82f7757a68786f548a1dbbce2cc8f911, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 16.740005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036162412137377903, guid: 82f7757a68786f548a1dbbce2cc8f911, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 16.740005
       objectReference: {fileID: 0}
     - target: {fileID: 7036162412407564038, guid: 82f7757a68786f548a1dbbce2cc8f911, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7998,8 +8010,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ee1113745d9614e95512a24bdf78d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: []
-  emp: []
+  key:
+  - time
+  - distance
+  - fare
+  - price_per_km
+  - driving_history
+  - stop
+  - new_guest
+  - invoice_printing
+  - setting
+  emp:
+  - {fileID: 429556285}
+  - {fileID: 1909713588}
+  - {fileID: 815402075}
+  - {fileID: 611659683}
+  - {fileID: 2016530936}
+  - {fileID: 53222688}
+  - {fileID: 1642825567}
+  - {fileID: 510267110}
+  - {fileID: 1055669407}
   List_img_change_icon_lang: []
 --- !u!114 &1586770118
 MonoBehaviour:
@@ -11107,7 +11137,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 16.740002, y: 0}
+  m_AnchoredPosition: {x: 16.740005, y: 0}
   m_SizeDelta: {x: -45.32, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016530936
