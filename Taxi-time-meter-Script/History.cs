@@ -1,9 +1,14 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class History : MonoBehaviour
 {
+    [Header("Obj Main")]
+    public App app;
+
+    [Header("Obj History")]
     public GameObject panel_history;
     public GameObject obj_item_history_prefab;
     public GameObject obj_view_history_prefab;
@@ -14,6 +19,8 @@ public class History : MonoBehaviour
     public Sprite sp_icon_history;
     private Carrot.Carrot_Box box_history = null;
 
+    private TextMeshProUGUI text_view_history = null;
+
     public void load()
     {
         this.length_history = PlayerPrefs.GetInt("length_history", 0);
@@ -23,12 +30,12 @@ public class History : MonoBehaviour
     {
         if (this.length_history == 0)
         {
-            this.GetComponent<App>().carrot.show_msg(PlayerPrefs.GetString("driving_history","Invoice history"),PlayerPrefs.GetString("driving_history_none","Empty invoice history!"),Carrot.Msg_Icon.Alert);
+            this.app.carrot.show_msg(PlayerPrefs.GetString("driving_history","Invoice history"),PlayerPrefs.GetString("driving_history_none","Empty invoice history!"),Carrot.Msg_Icon.Alert);
         }
         else
         {
             this.panel_history.SetActive(true);
-            this.GetComponent<App>().carrot.clear_contain(this.area_body);
+            this.app.carrot.clear_contain(this.area_body);
             for (int i = this.length_history - 1; i >= 0; i--)
             {
                 GameObject obj_history_item = Instantiate(this.obj_item_history_prefab);
@@ -126,7 +133,7 @@ public class History : MonoBehaviour
 
     public void quick_view_item(Index index_history)
     {
-        this.box_history=this.GetComponent<App>().carrot.Create_Box(PlayerPrefs.GetString("quick_view", "Quick View"),this.sp_icon_history);
+        this.box_history=this.app.carrot.Create_Box(PlayerPrefs.GetString("quick_view", "Quick View"),this.sp_icon_history);
         float h_price_km = PlayerPrefs.GetFloat("h_price_km_" + index_history);
         float h_km = PlayerPrefs.GetFloat("h_km_" + index_history);
         float bill_price;
@@ -149,7 +156,14 @@ public class History : MonoBehaviour
         item_text_view_history.transform.SetParent(this.box_history.area_all_item);
         item_text_view_history.transform.localPosition = new Vector3(item_text_view_history.transform.localPosition.x, item_text_view_history.transform.localPosition.y, item_text_view_history.transform.localPosition.z);
         item_text_view_history.transform.localScale = new Vector3(1f,1f,1f);
-        item_text_view_history.GetComponent<Text>().text = message;
-        this.GetComponent<App>().carrot.play_sound_click();
+        this.text_view_history = item_text_view_history.GetComponent<TextMeshProUGUI>();
+        this.text_view_history.text = message;
+        this.app.carrot.play_sound_click();
+        this.app.carrot.delay_function(1.2f, this.fix_size_box_view_history);
+    }
+
+    private void fix_size_box_view_history()
+    {
+        this.text_view_history.overflowMode = TextOverflowModes.Masking;
     }
 }

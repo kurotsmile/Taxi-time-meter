@@ -36,6 +36,7 @@ public class App : MonoBehaviour
     public Text txt_btn_play;
 
     [Header("Setting App")]
+    public AudioSource sound_background_music;
     private Carrot.Carrot_Box box_setting;
     public Sprite sp_price_per_km;
     public Sprite sp_price_per_km_list;
@@ -50,6 +51,7 @@ public class App : MonoBehaviour
     {
         this.carrot.Load_Carrot(this.on_check_exit_app);
         this.carrot.change_sound_click(this.sound_click_Clip);
+        this.carrot.game.load_bk_music(this.sound_background_music);
 
         this.panel_main.SetActive(true);
         this.show_digit("h", this.digit_control[2].area_digit);
@@ -232,6 +234,7 @@ public class App : MonoBehaviour
 
         Carrot.Carrot_Box_Btn_Item btn_list_Item_price_currency = Item_price_currency.create_item();
         btn_list_Item_price_currency.set_icon(this.sp_price_per_km_list);
+        btn_list_Item_price_currency.set_color(this.carrot.color_highlight);
         btn_list_Item_price_currency.GetComponent<Button>().enabled = false;
 
         Carrot.Carrot_Box_Item Item_price_per_km=box_setting.create_item_of_top("Item_price_per_km");
@@ -245,6 +248,7 @@ public class App : MonoBehaviour
 
         Carrot.Carrot_Box_Btn_Item btn_list_price_per_km= Item_price_per_km.create_item();
         btn_list_price_per_km.set_icon(this.sp_price_per_km_list);
+        btn_list_price_per_km.set_color(this.carrot.color_highlight);
         btn_list_price_per_km.GetComponent<Button>().enabled = false;
 
         box_setting.update_color_table_row();
@@ -283,7 +287,7 @@ public class App : MonoBehaviour
             lat_end = this.GetComponent<Manager_location>().latA;
         }
 
-        this.history.add(this.time_second, this.km, this.price_per_km, this.GetComponent<Km_list>().get_price_by_km(this.km), 1.2f, DateTime.Now.ToString(), this.p_location_lon_start, this.p_location_lat_start, lon_end, lat_end, this.GetComponent<Currency_list>().get_cur_symbol_currency());
+        this.history.add(this.time_second, this.km, this.price_per_km, this.GetComponent<Km_list>().get_price_by_km(this.km), 1.2f, DateTime.Now.ToString(), this.p_location_lon_start, this.p_location_lat_start, lon_end, lat_end, this.GetComponent<Currency_list>().get_cur_name_currency());
 
 
         this.btn_obj_print.SetActive(true);
