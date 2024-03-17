@@ -8,7 +8,6 @@ public class App : MonoBehaviour
     [Header("Obj App")]
     public GameObject panel_main;
     public History history;
-    public GameObject obj_effect_bloom;
 
     public Sprite[] sp_digit_number;
     public Sprite sp_taxi_play;
@@ -80,7 +79,6 @@ public class App : MonoBehaviour
                 this.list_distance_test.Add(d);
             }
         }
-        this.obj_effect_bloom.SetActive(true);
     }
 
     void Update()
@@ -219,7 +217,6 @@ public class App : MonoBehaviour
     public void btn_show_setting()
     {
         this.carrot.ads.show_ads_Interstitial();
-        this.obj_effect_bloom.SetActive(false);
         this.box_setting=this.carrot.Create_Setting();
         box_setting.set_title(PlayerPrefs.GetString("setting","Setting"));
 
@@ -258,7 +255,6 @@ public class App : MonoBehaviour
     private void act_close_setting()
     {
         this.carrot.ads.show_ads_Interstitial();
-        this.obj_effect_bloom.SetActive(true);
     }
 
     public void btn_show_rate_app()

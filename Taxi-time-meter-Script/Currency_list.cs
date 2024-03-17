@@ -33,7 +33,6 @@ public class Currency_list : MonoBehaviour
     public void show_list_Currency()
     {
         this.app.carrot.play_sound_click();
-        this.app.obj_effect_bloom.SetActive(false);
         this.box_Currency = this.app.carrot.Create_Box(PlayerPrefs.GetString("currency_unit", "Currency unit"), this.icon_Currency);
 
         for (int i = 0; i < this.code_currency.Length; i++)
@@ -54,15 +53,7 @@ public class Currency_list : MonoBehaviour
                 Destroy(btn_check.GetComponent<Button>());
             }
         }
-
         this.box_Currency.update_color_table_row();
-        box_Currency.set_act_before_closing(act_close_list_currency);
-    }
-
-
-    private void act_close_list_currency()
-    {
-        this.GetComponent<App>().obj_effect_bloom.SetActive(true);
     }
 
     public void select_Currency(string s_name_Currency,string symbol_currency)
