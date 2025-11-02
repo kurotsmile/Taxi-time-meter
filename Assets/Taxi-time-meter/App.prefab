@@ -2377,7 +2377,6 @@ GameObject:
   - component: {fileID: 2823281324269974334}
   - component: {fileID: 9182838745991534422}
   - component: {fileID: 1802826155572440587}
-  - component: {fileID: 4935440997096861469}
   m_Layer: 0
   m_Name: App
   m_TagString: Untagged
@@ -2418,7 +2417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel_main: {fileID: 3268794781196805283}
   history: {fileID: 8318102252676294836}
-  ads: {fileID: 4935440997096861469}
+  ads: {fileID: 0}
   sp_digit_number:
   - {fileID: 5499475767759501681, guid: 1cfedc90f5d86e749aaba197d03aa33d, type: 3}
   - {fileID: 3872255449157404994, guid: 1cfedc90f5d86e749aaba197d03aa33d, type: 3}
@@ -2557,6 +2556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0ab0ed963dedb448c5a67328d55196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  app: {fileID: 723251636771824140}
   panel_km: {fileID: 3150137170321609031}
   panel_km_body_add: {fileID: 5273749549558836624}
   panel_km_body_list: {fileID: 3053271247327627581}
@@ -2924,24 +2924,6 @@ MonoBehaviour:
   - "\u20AB"
   - "\uFDFC"
   - Z$
---- !u!114 &4935440997096861469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2585438468321869176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 700ea10a8b9a9ba48b52bf986f790344, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  count_step_show_interstitial: 5
-  emplement_Ads: []
-  app_key: 20ac645c5
-  id_banner: 016l3jylutrk7pxv
-  id_video: tmtsn62jkuftar9y
-  id_rewarded: ulrp814ucj412elx
 --- !u!1 &2599447778955688170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5153,7 +5135,7 @@ MonoBehaviour:
   m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 4
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 1

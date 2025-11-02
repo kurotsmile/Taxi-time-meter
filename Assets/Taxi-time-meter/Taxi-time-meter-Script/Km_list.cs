@@ -11,6 +11,8 @@ public class val_km
 
 public class Km_list : MonoBehaviour
 {
+    [Header("Main Object")]
+    public App app;
     public GameObject panel_km;
     public GameObject panel_km_body_add;
     public GameObject panel_km_body_list;
@@ -61,19 +63,19 @@ public class Km_list : MonoBehaviour
         item_km_add_tip.transform.SetParent(this.area_km_body_list);
         item_km_add_tip.transform.localPosition = new Vector3(item_km_add_tip.transform.localPosition.x, item_km_add_tip.transform.localPosition.y, item_km_add_tip.transform.localPosition.z);
         item_km_add_tip.transform.localScale = new Vector3(1f, 1f, 1f);
-        item_km_add_tip.GetComponent<Item_km>().txt_title.text = PlayerPrefs.GetString("km_price_add", "Add promotional price corresponding to the distance");
-        item_km_add_tip.GetComponent<Item_km>().txt_tip.text = PlayerPrefs.GetString("km_price_add_tip", "Click here to add promotional prices by route");
+        item_km_add_tip.GetComponent<Item_km>().txt_title.text = app.carrot.L("km_price_add", "Add promotional price corresponding to the distance");
+        item_km_add_tip.GetComponent<Item_km>().txt_tip.text =app.carrot.L("km_price_add_tip", "Click here to add promotional prices by route");
 
         GameObject item_km_default = Instantiate(this.prefab_km_item);
         item_km_default.transform.SetParent(this.area_km_body_list);
         item_km_default.transform.localPosition = new Vector3(item_km_default.transform.localPosition.x, item_km_default.transform.localPosition.y, item_km_default.transform.localPosition.z);
         item_km_default.transform.localScale = new Vector3(1f, 1f, 1f);
-        item_km_default.GetComponent<Item_km>().txt_title.text = PlayerPrefs.GetString("km_price_default", "Default price of each route when not specifically set");
+        item_km_default.GetComponent<Item_km>().txt_title.text = app.carrot.L("km_price_default", "Default price of each route when not specifically set");
         item_km_default.GetComponent<Item_km>().txt_tip.text = PlayerPrefs.GetFloat("price_per_km_val",1f).ToString() + " " + this.GetComponent<Currency_list>().get_cur_symbol_currency();
         item_km_default.GetComponent<Item_km>().icon.sprite = this.sp_icon_km_default;
         item_km_default.GetComponent<Item_km>().type = 2;
         item_km_default.GetComponent<Item_km>().btn_delete.SetActive(false);
-        item_km_default.GetComponent<Item_km>().txt_label_edit.text = PlayerPrefs.GetString("edit", "Edit");
+        item_km_default.GetComponent<Item_km>().txt_label_edit.text = app.carrot.L("edit", "Edit");
 
         this.list_val_km = new List<val_km>();
         for (int i = 0; i < this.leng_km; i++)
@@ -86,10 +88,10 @@ public class Km_list : MonoBehaviour
                 item_km.transform.localPosition = new Vector3(item_km.transform.localPosition.x, item_km.transform.localPosition.y, item_km.transform.localPosition.z);
                 item_km.transform.localScale = new Vector3(1f, 1f, 1f);
                 item_km.GetComponent<Item_km>().txt_tip.text = PlayerPrefs.GetFloat("km_item_price_" + i).ToString() + " " + this.GetComponent<Currency_list>().get_cur_symbol_currency();
-                item_km.GetComponent<Item_km>().txt_title.text = PlayerPrefs.GetString("distance", "Distance") + " >= " + km_item_distance + " " + PlayerPrefs.GetString("kilometro", "kilometro");
+                item_km.GetComponent<Item_km>().txt_title.text = app.carrot.L("distance", "Distance") + " >= " + km_item_distance + " " + app.carrot.L("kilometro", "kilometro");
                 item_km.GetComponent<Item_km>().index = i;
-                item_km.GetComponent<Item_km>().txt_label_del.text = PlayerPrefs.GetString("del", "Delete");
-                item_km.GetComponent<Item_km>().txt_label_edit.text = PlayerPrefs.GetString("edit", "Edit");
+                item_km.GetComponent<Item_km>().txt_label_del.text = app.carrot.L("del", "Delete");
+                item_km.GetComponent<Item_km>().txt_label_edit.text = app.carrot.L("edit", "Edit");
 
                 if (this.GetComponent<App>().get_km() >= km_item_distance)
                 {
@@ -158,7 +160,7 @@ public class Km_list : MonoBehaviour
         {
             PlayerPrefs.SetFloat("price_per_km_val", float.Parse(this.inp_km_price.text));
             this.GetComponent<App>().set_price_per_km(float.Parse(this.inp_km_price.text));
-            this.GetComponent<App>().carrot.Show_msg(PlayerPrefs.GetString("price_per_km", "Price per kilometer"), PlayerPrefs.GetString("km_price_edit_success", "Promotional price has been successfully updated!"), Carrot.Msg_Icon.Success);
+            this.GetComponent<App>().carrot.Show_msg(app.carrot.L("price_per_km", "Price per kilometer"), app.carrot.L("km_price_edit_success", "Promotional price has been successfully updated!"), Carrot.Msg_Icon.Success);
         }
         else
         {
@@ -170,12 +172,12 @@ public class Km_list : MonoBehaviour
     {
         if (this.inp_km_distance.text.Trim() == "" || this.inp_km_price.text.Trim() == "")
         {
-            this.GetComponent<App>().carrot.Show_msg(PlayerPrefs.GetString("price_per_km", "Price per kilometer"), "Input distance and price must be greater than 0", Carrot.Msg_Icon.Error);
+            this.GetComponent<App>().carrot.Show_msg(app.carrot.L("price_per_km", "Price per kilometer"), "Input distance and price must be greater than 0", Carrot.Msg_Icon.Error);
             return false;
         }
         else if (int.Parse(this.inp_km_distance.text) <= 0 || float.Parse(this.inp_km_price.text) <= 0)
         {
-            this.GetComponent<App>().carrot.Show_msg(PlayerPrefs.GetString("price_per_km", "Price per kilometer"), PlayerPrefs.GetString("km_price_error", "Value input error , Distance and price must be greater than 0 !"), Carrot.Msg_Icon.Error);
+            this.GetComponent<App>().carrot.Show_msg(app.carrot.L("price_per_km", "Price per kilometer"), app.carrot.L("km_price_error", "Value input error , Distance and price must be greater than 0 !"), Carrot.Msg_Icon.Error);
             return false;
         }
         else
@@ -191,7 +193,7 @@ public class Km_list : MonoBehaviour
         PlayerPrefs.SetInt("km_item_distance_" + this.leng_km, km);
         this.leng_km++;
         PlayerPrefs.SetInt("leng_km", this.leng_km);
-        this.GetComponent<App>().carrot.Show_msg(PlayerPrefs.GetString("price_per_km", "Price per kilometer"), PlayerPrefs.GetString("km_price_add_success", "Successfully added the corresponding promotional price!"), Carrot.Msg_Icon.Success);
+        this.GetComponent<App>().carrot.Show_msg(app.carrot.L("price_per_km", "Price per kilometer"), app.carrot.L("km_price_add_success", "Successfully added the corresponding promotional price!"), Carrot.Msg_Icon.Success);
         this.btn_show_list_km();
     }
 
@@ -199,7 +201,7 @@ public class Km_list : MonoBehaviour
     {
         PlayerPrefs.SetFloat("km_item_price_" + this.index_edit_km, price);
         PlayerPrefs.SetInt("km_item_distance_" + this.index_edit_km, km);
-        this.GetComponent<App>().carrot.Show_msg(PlayerPrefs.GetString("price_per_km", "Price per kilometer"), PlayerPrefs.GetString("km_price_edit_success", "Promotional price has been successfully updated!"), Carrot.Msg_Icon.Success);
+        this.GetComponent<App>().carrot.Show_msg(app.carrot.L("price_per_km", "Price per kilometer"), app.carrot.L("km_price_edit_success", "Promotional price has been successfully updated!"), Carrot.Msg_Icon.Success);
         this.btn_show_list_km();
     }
 

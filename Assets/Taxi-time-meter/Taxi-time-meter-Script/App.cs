@@ -201,14 +201,14 @@ public class App : MonoBehaviour
         if (this.status_play == 0)
         {
             this.img_btn_play.sprite = this.sp_taxi_play;
-            this.txt_btn_play.text = PlayerPrefs.GetString("begin", "Begin");
+            this.txt_btn_play.text = carrot.L("begin", "Begin");
             this.digit_control[0].reset_color();
         }
 
         if (this.status_play==1)
         {
             this.img_btn_play.sprite = this.sp_taxi_pause;
-            this.txt_btn_play.text = PlayerPrefs.GetString("pause", "Pause");
+            this.txt_btn_play.text = carrot.L("pause", "Pause");
             this.digit_control[0].change_color();
             this.ads.show_ads_Interstitial();
         }
@@ -216,7 +216,7 @@ public class App : MonoBehaviour
         if(this.status_play==2)
         {
             this.img_btn_play.sprite = this.sp_taxi_play;
-            this.txt_btn_play.text = PlayerPrefs.GetString("keep_running", "Keep Running");
+            this.txt_btn_play.text = carrot.L("keep_running", "Keep Running");
             this.digit_control[0].change_color();
         } 
     }
@@ -225,7 +225,7 @@ public class App : MonoBehaviour
     {
         this.ads.show_ads_Interstitial();
         this.box_setting=this.carrot.Create_Setting();
-        box_setting.set_title(PlayerPrefs.GetString("setting","Setting"));
+        box_setting.set_title(carrot.L("setting","Setting"));
 
         Carrot.Carrot_Box_Item Item_price_currency = box_setting.create_item_of_top("Item_price_per_km");
         Item_price_currency.set_icon(this.GetComponent<Currency_list>().icon_Currency);
@@ -363,14 +363,14 @@ public class App : MonoBehaviour
     public void btn_print_invoice_printing()
     {
         string mobile_num = "+1";
-        string message = PlayerPrefs.GetString("invoice_summary", "Invoice Summary")+"\n-------------------\n";
-        message = message+ PlayerPrefs.GetString("invoice_date", "Invoice Date") + ":"+ DateTime.Now.ToString("M/d/yyyy")+"\n";
-        message = message+ PlayerPrefs.GetString("kilometro", "Kilometro") + ":" + this.km.ToString("F2") + "\n";
+        string message = carrot.L("invoice_summary", "Invoice Summary")+"\n-------------------\n";
+        message = message+ carrot.L("invoice_date", "Invoice Date") + ":"+ DateTime.Now.ToString("M/d/yyyy")+"\n";
+        message = message+ carrot.L("kilometro", "Kilometro") + ":" + this.km.ToString("F2") + "\n";
         TimeSpan t = TimeSpan.FromSeconds(time_second);
-        message = message+ PlayerPrefs.GetString("running_time", "Running time") + ":" + string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds) + "\n";
+        message = message+ carrot.L("running_time", "Running time") + ":" + string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds) + "\n";
         if(this.GetComponent<Km_list>().get_length()>0)
-        message = message+ PlayerPrefs.GetString("km_promotional_price", "Promotional price of the road") + ":" + this.GetComponent<Km_list>().get_price_by_km(this.km).ToString("F2") + "\n";
-        message = message+ PlayerPrefs.GetString("total_amount", "Total amount") + ":" + this.bill_price.ToString("F2") + " "+this.GetComponent<Currency_list>().get_cur_symbol_currency() + "\n";
+        message = message+ carrot.L("km_promotional_price", "Promotional price of the road") + ":" + this.GetComponent<Km_list>().get_price_by_km(this.km).ToString("F2") + "\n";
+        message = message+ carrot.L("total_amount", "Total amount") + ":" + this.bill_price.ToString("F2") + " "+this.GetComponent<Currency_list>().get_cur_symbol_currency() + "\n";
         string URL = string.Format("sms:{0}?body={1}", mobile_num, message);
         Application.OpenURL(URL);
     }

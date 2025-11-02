@@ -30,7 +30,7 @@ public class History : MonoBehaviour
     {
         if (this.length_history == 0)
         {
-            this.app.carrot.Show_msg(PlayerPrefs.GetString("driving_history","Invoice history"),PlayerPrefs.GetString("driving_history_none","Empty invoice history!"),Carrot.Msg_Icon.Alert);
+            this.app.carrot.Show_msg(app.carrot.L("driving_history","Invoice history"),app.carrot.L("driving_history_none","Empty invoice history!"),Carrot.Msg_Icon.Alert);
         }
         else
         {
@@ -44,11 +44,11 @@ public class History : MonoBehaviour
                 TimeSpan t = TimeSpan.FromSeconds(PlayerPrefs.GetFloat("h_time_" + i));
                 obj_history_item.GetComponent<Item_history>().txt_title.text = string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds);
                 obj_history_item.GetComponent<Item_history>().txt_tip.text = PlayerPrefs.GetString("h_date_time_" + i);
-                obj_history_item.GetComponent<Item_history>().txt_text_btn_print.text = PlayerPrefs.GetString("invoice_printing", "Invoice printing");
-                obj_history_item.GetComponent<Item_history>().txt_text_btn_view.text = PlayerPrefs.GetString("quick_view", "Quick view");
+                obj_history_item.GetComponent<Item_history>().txt_text_btn_print.text = app.carrot.L("invoice_printing", "Invoice printing");
+                obj_history_item.GetComponent<Item_history>().txt_text_btn_view.text = app.carrot.L("quick_view", "Quick view");
                 if (PlayerPrefs.GetFloat("h_lon_end_" + i, 0f) > 0f)
                 {
-                    obj_history_item.GetComponent<Item_history>().txt_text_btn_distance.text = PlayerPrefs.GetString("distance", "Distance");
+                    obj_history_item.GetComponent<Item_history>().txt_text_btn_distance.text = app.carrot.L("distance", "Distance");
                     obj_history_item.GetComponent<Item_history>().btn_distance.SetActive(true);
                     obj_history_item.GetComponent<Item_history>().p_lat_start = PlayerPrefs.GetFloat("h_lat_start_"+i);
                     obj_history_item.GetComponent<Item_history>().p_lon_start = PlayerPrefs.GetFloat("h_lon_start_"+i);
@@ -113,12 +113,12 @@ public class History : MonoBehaviour
         float h_km = PlayerPrefs.GetFloat("h_km_" + index_history);
         float bill_price;
         string mobile_num = "+1";
-        string message = PlayerPrefs.GetString("invoice_summary", "Invoice Summary")+"\n-------------------\n";
-        message = message + PlayerPrefs.GetString("invoice_date", "Invoice Date") +":"+PlayerPrefs.GetString("h_date_time_"+index_history) + "\n";
-        message = message + PlayerPrefs.GetString("kilometro", "Kilometro") +":"+ h_price_km.ToString("F2") + "\n";
+        string message = app.carrot.L("invoice_summary", "Invoice Summary")+"\n-------------------\n";
+        message = message + app.carrot.L("invoice_date", "Invoice Date") +":"+app.carrot.L("h_date_time_"+index_history) + "\n";
+        message = message + app.carrot.L("kilometro", "Kilometro") +":"+ h_price_km.ToString("F2") + "\n";
         TimeSpan t = TimeSpan.FromSeconds(PlayerPrefs.GetFloat("h_time_" + index_history));
-        message = message + PlayerPrefs.GetString("running_time", "Running time") + ":" + string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds) + "\n";
-        message = message + PlayerPrefs.GetString("km_promotional_price", "Promotional price of the road") + ":" + PlayerPrefs.GetFloat("h_price_km_Promotional_" + index_history) +" "+PlayerPrefs.GetString("h_currency_"+index_history,"$") + "\n";
+        message = message + app.carrot.L("running_time", "Running time") + ":" + string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds) + "\n";
+        message = message + app.carrot.L("km_promotional_price", "Promotional price of the road") + ":" + PlayerPrefs.GetFloat("h_price_km_Promotional_" + index_history) +" "+PlayerPrefs.GetString("h_currency_"+index_history,"$") + "\n";
 
         if (h_km < 1.2f)
             bill_price = h_km / h_price_km;
@@ -126,23 +126,23 @@ public class History : MonoBehaviour
             bill_price = h_km * h_price_km;
 
         message = message + "-------------------\n";
-        message = message + PlayerPrefs.GetString("total_amount", "Total amount") +":" + bill_price.ToString("F2") + " "+ PlayerPrefs.GetString("h_currency_" + index_history, "$") + "\n";
+        message = message + app.carrot.L("total_amount", "Total amount") +":" + bill_price.ToString("F2") + " "+ PlayerPrefs.GetString("h_currency_" + index_history, "$") + "\n";
         string URL = string.Format("sms:{0}?body={1}", mobile_num, message);
         Application.OpenURL(URL);
     }
 
     public void quick_view_item(Index index_history)
     {
-        this.box_history=this.app.carrot.Create_Box(PlayerPrefs.GetString("quick_view", "Quick View"),this.sp_icon_history);
+        this.box_history=this.app.carrot.Create_Box(app.carrot.L("quick_view", "Quick View"),this.sp_icon_history);
         float h_price_km = PlayerPrefs.GetFloat("h_price_km_" + index_history);
         float h_km = PlayerPrefs.GetFloat("h_km_" + index_history);
         float bill_price;
-        string message = PlayerPrefs.GetString("invoice_summary", "Invoice Summary") + "\n-------------------\n";
-        message = message + PlayerPrefs.GetString("invoice_date", "Invoice Date") + ":" + PlayerPrefs.GetString("h_date_time_" + index_history) + "\n";
-        message = message + PlayerPrefs.GetString("kilometro", "Kilometro") + ":" + h_price_km.ToString("F2") + "\n";
+        string message = app.carrot.L("invoice_summary", "Invoice Summary") + "\n-------------------\n";
+        message = message + app.carrot.L("invoice_date", "Invoice Date") + ":" + PlayerPrefs.GetString("h_date_time_" + index_history) + "\n";
+        message = message + app.carrot.L("kilometro", "Kilometro") + ":" + h_price_km.ToString("F2") + "\n";
         TimeSpan t = TimeSpan.FromSeconds(PlayerPrefs.GetFloat("h_time_" + index_history));
-        message = message + PlayerPrefs.GetString("running_time", "Running time") + ":" + string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds) + "\n";
-        message = message + PlayerPrefs.GetString("km_promotional_price", "Promotional price of the road") + ":" + PlayerPrefs.GetFloat("h_price_km_Promotional_" + index_history) + " " + PlayerPrefs.GetString("h_currency_" + index_history, "$") + "\n";
+        message = message + app.carrot.L("running_time", "Running time") + ":" + string.Format("{0:D2}:{1:D2}:{2:D2}", t.Hours, t.Minutes, t.Seconds) + "\n";
+        message = message + app.carrot.L("km_promotional_price", "Promotional price of the road") + ":" + PlayerPrefs.GetFloat("h_price_km_Promotional_" + index_history) + " " + PlayerPrefs.GetString("h_currency_" + index_history, "$") + "\n";
 
         if (h_km < 1.2f)
             bill_price = h_km / h_price_km;
@@ -150,7 +150,7 @@ public class History : MonoBehaviour
             bill_price = h_km * h_price_km;
 
         message = message + "-------------------\n";
-        message = message + PlayerPrefs.GetString("total_amount", "Total amount") + ":" + bill_price.ToString("F2") + " " + PlayerPrefs.GetString("h_currency_" + index_history, "$") + "\n";
+        message = message + app.carrot.L("total_amount", "Total amount") + ":" + bill_price.ToString("F2") + " " + PlayerPrefs.GetString("h_currency_" + index_history, "$") + "\n";
 
         GameObject item_text_view_history = Instantiate(this.obj_view_history_prefab);
         item_text_view_history.transform.SetParent(this.box_history.area_all_item);

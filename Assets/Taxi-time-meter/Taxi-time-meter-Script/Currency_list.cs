@@ -33,7 +33,7 @@ public class Currency_list : MonoBehaviour
     public void show_list_Currency()
     {
         this.app.carrot.play_sound_click();
-        this.box_Currency = this.app.carrot.Create_Box(PlayerPrefs.GetString("currency_unit", "Currency unit"), this.icon_Currency);
+        this.box_Currency = this.app.carrot.Create_Box(app.carrot.L("currency_unit", "Currency unit"), this.icon_Currency);
 
         for (int i = 0; i < this.code_currency.Length; i++)
         {
